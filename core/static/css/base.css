@@ -1,0 +1,53 @@
+input[type=file] {
+    display: inline-block;
+}
+.navbar-static-top {
+    background: #6262ad;
+    margin-left: 5px;
+    opacity: 100%;
+    width: 100%;
+}
+.nav{
+    padding-left: 40px;
+}
+.navbar-static-top .nav.navbar-top-links .nav-link{
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+.page-heading{
+    margin-left: 0;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.page-heading h2{
+    font-size: 30px;
+}
+.wrapper-content{
+    margin-left: 0;
+    padding-left: 0;
+}
+#page-wrapper{
+    margin: 0 220px;
+}
+.btn{
+    font-size: 18px;
+}
+.font-body{
+    font-size: 18px;
+}
+.img-result{
+    margin-bottom: 25px;
+    background-color: #e8e8e8;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.img-result img{
+    max-width: 500px;
+    max-height: 500px;
+}
+.text-similarity{
+    text-align: center;
+    color: red;
+}

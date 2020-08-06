@@ -1,0 +1,43 @@
+{% extends 'base_content.html' %}{% load static %}
+{% block title %}Plagiarism Result{% endblock %}
+{% block page_header %}
+    <h2>Comparison Results</h2>
+{% endblock %}
+{% block content %}
+    <div class="ibox product-detail">
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header">
+                        {% if results %}
+                            <h3>Possible plagiarisms:</h3>
+                            {% for img_path, value in results.items %}
+                                <div class="img-result">
+                                    <div class="row">
+                                        <div class="col-lg-1">
+                                            Your image:
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img src="{% static img_path %}" alt="{{ img_path }}">
+                                        </div>
+                                        <div class="col-lg-1">
+                                            Original image:
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img src="{% static value.0 %}" alt="{{ value.0 }}">
+                                        </div>
+                                    </div>
+                                    <div class="row text-similarity">Similarity percentage: {{ value.1 }}%</div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="text-navy">
+                                All is well, plagiarism isn't found
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base_content.html' %}{% load static %}
+{% block title %}Upload{% endblock %}
+{% block page_header %}
+    <h2>Extend collection</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="ibox product-detail">
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header">
+                        {% block description %}
+                            <h3>Select a file to upload all images from it to the system.</h3>
+                        {% endblock %}
+                        <span class="text-navy">{{ result }}</span>
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <input class="btn" type="file" name="document" accept=".doc, .docx, .odt, .pdf">
+                            <button class="btn btn-primary" type="submit">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

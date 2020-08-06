@@ -1,0 +1,37 @@
+{% extends 'base.html' %}{% load static %}
+{% block body %}
+    <body class="gray-bg font-body">
+
+    <div id="wrapper">
+        <div class="row border-bottom text-center">
+            <nav class="navbar-static-top" role="navigation">
+                <ul class="nav navbar-top-links">
+                    <li>
+                        <a href="{% url 'upload' %}" class="nav-link"><i class="fa fa-upload"></i> Extend collection
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'home' %}" class="nav-link">
+                            <i class="fa fa-play-circle"></i> Plagiarism Test </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row wrapper border-bottom white-bg page-heading text-center">
+                    <div class="col-lg-10">
+                {% block page_header %}
+                        <h2>Plagiarism Search</h2>
+                {% endblock %}
+                    </div>
+                    <div class="col-lg-2"></div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+        </div>
+    </div>
+    </body>
+{% endblock %}
